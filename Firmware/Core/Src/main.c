@@ -143,12 +143,13 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  	GPIO_InitTypeDef gpio = configuredGPIO();
 	TIM_HandleTypeDef timer = configuredTimer();
 	TIM_Encoder_InitTypeDef encoder = configuredEncoder();
 
+	HAL_GPIO_Init(GPIOA, &gpio);
 	HAL_TIM_Encoder_Init(&timer, &encoder);
-
-	TIM1->CR1 = 1;           // Enable the counter
+	HAL_TIM_Encoder_Start(&timer, TIM_CHANNEL_1);
 
   /* USER CODE END 2 */
 
