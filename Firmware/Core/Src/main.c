@@ -156,8 +156,10 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
-		int16_t count1 = TIM1->CNT;
-		printf("%d\r\n", count1);
+		int16_t count = TIM1->CNT;
+		int dir = (TIM1->CR1 >> 4UL) & 0x1UL;
+
+		printf("count: %d dir: %d\r\n", count/2, dir);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
