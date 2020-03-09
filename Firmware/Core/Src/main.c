@@ -99,17 +99,12 @@ TIM_HandleTypeDef configuredTimer() {
 TIM_Encoder_InitTypeDef configuredEncoder() {
 	TIM_Encoder_InitTypeDef encoder;
 
-	encoder.EncoderMode = TIM_ENCODERMODE_TI12;
+	encoder.EncoderMode = TIM_ENCODERMODE_TI1;
 
 	encoder.IC1Filter = 0x0f;
 	encoder.IC1Polarity = TIM_INPUTCHANNELPOLARITY_RISING;
 	encoder.IC1Prescaler = TIM_ICPSC_DIV4;
 	encoder.IC1Selection = TIM_ICSELECTION_DIRECTTI;
-
-	encoder.IC2Filter = 0x0f;
-	encoder.IC2Polarity = TIM_INPUTCHANNELPOLARITY_FALLING;
-	encoder.IC2Prescaler = TIM_ICPSC_DIV4;
-	encoder.IC2Selection = TIM_ICSELECTION_DIRECTTI;
 
 	return encoder;
 }
