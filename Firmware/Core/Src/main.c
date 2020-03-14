@@ -25,7 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include  <errno.h>
 #include  <sys/unistd.h> // STDOUT_FILENO, STDERR_FILENO
-#include "epaper/EPD_Test.h"
+#include "../User/Examples/EPD_Test.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -159,8 +159,8 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
-		int16_t count = TIM1->CNT;
-		int dir = (TIM1->CR1 >> 4UL) & 0x1UL;
+//		int16_t count = TIM1->CNT;
+//		int dir = (TIM1->CR1 >> 4UL) & 0x1UL;
 
 //		printf("count: %d dir: %d\r\n", count / 2, dir);
     /* USER CODE END WHILE */
@@ -190,9 +190,9 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLM = 16;
-  RCC_OscInitStruct.PLL.PLLN = 336;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
+  RCC_OscInitStruct.PLL.PLLM = 8;
+  RCC_OscInitStruct.PLL.PLLN = 84;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 7;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -317,7 +317,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, epaper_RST_Pin|epaper_DC_Pin|epaper_SPI_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, RST_Pin|DC_Pin|SPI_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
@@ -325,18 +325,18 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : epaper_RST_Pin epaper_DC_Pin epaper_SPI_CS_Pin */
-  GPIO_InitStruct.Pin = epaper_RST_Pin|epaper_DC_Pin|epaper_SPI_CS_Pin;
+  /*Configure GPIO pins : RST_Pin DC_Pin SPI_CS_Pin */
+  GPIO_InitStruct.Pin = RST_Pin|DC_Pin|SPI_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : epaper_BUSY_Pin */
-  GPIO_InitStruct.Pin = epaper_BUSY_Pin;
+  /*Configure GPIO pin : BUSY_Pin */
+  GPIO_InitStruct.Pin = BUSY_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(epaper_BUSY_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(BUSY_GPIO_Port, &GPIO_InitStruct);
 
 }
 
