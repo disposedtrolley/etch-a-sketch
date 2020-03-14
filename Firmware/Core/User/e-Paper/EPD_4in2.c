@@ -159,7 +159,7 @@ static void EPD_4IN2_TurnOnDisplay(void) {
  ******************************************************************************/
 static void EPD_4IN2_SetLut(void) {
 	UWORD count;
-	EPD_4IN2_SendCommand(VCOM_LUT);         //g vcom
+	EPD_4IN2_SendCommand(VCOM_LUT);
 	for (count = 0; count < 44; count++) {
 		EPD_4IN2_SendData(EPD_4IN2_lut_vcom0[count]);
 	}
@@ -217,32 +217,32 @@ static void EPD_4IN2_Partial_SetLut(void) {
 static void EPD_4IN2_4Gray_lut(void) {
 	unsigned int count;
 	{
-		EPD_4IN2_SendCommand(VCOM_LUT);							//vcom
+		EPD_4IN2_SendCommand(VCOM_LUT);
 		for (count = 0; count < 42; count++) {
 			EPD_4IN2_SendData(EPD_4IN2_4Gray_lut_vcom[count]);
 		}
 
-		EPD_4IN2_SendCommand(W2W_LUT);							//red not use
+		EPD_4IN2_SendCommand(W2W_LUT);
 		for (count = 0; count < 42; count++) {
 			EPD_4IN2_SendData(EPD_4IN2_4Gray_lut_ww[count]);
 		}
 
-		EPD_4IN2_SendCommand(B2W_LUT);							//bw r
+		EPD_4IN2_SendCommand(B2W_LUT);
 		for (count = 0; count < 42; count++) {
 			EPD_4IN2_SendData(EPD_4IN2_4Gray_lut_bw[count]);
 		}
 
-		EPD_4IN2_SendCommand(W2B_LUT);							//wb w
+		EPD_4IN2_SendCommand(W2B_LUT);
 		for (count = 0; count < 42; count++) {
 			EPD_4IN2_SendData(EPD_4IN2_4Gray_lut_wb[count]);
 		}
 
-		EPD_4IN2_SendCommand(B2B_LUT);							//bb b
+		EPD_4IN2_SendCommand(B2B_LUT);
 		for (count = 0; count < 42; count++) {
 			EPD_4IN2_SendData(EPD_4IN2_4Gray_lut_bb[count]);
 		}
 
-		EPD_4IN2_SendCommand(VCOM);							//vcom
+		EPD_4IN2_SendCommand(VCOM);
 		for (count = 0; count < 42; count++) {
 			EPD_4IN2_SendData(EPD_4IN2_4Gray_lut_ww[count]);
 		}
@@ -255,52 +255,13 @@ static void EPD_4IN2_4Gray_lut(void) {
 void EPD_4IN2_Init(void) {
 	EPD_4IN2_Reset();
 
-	EPD_4IN2_SendCommand(POWER_SETTING); // POWER SETTING
+	EPD_4IN2_SendCommand(POWER_SETTING);
 	EPD_4IN2_SendData(0x03);
 	EPD_4IN2_SendData(0x00);
 	EPD_4IN2_SendData(0x2b);
 	EPD_4IN2_SendData(0x2b);
 
-	EPD_4IN2_SendCommand(BOOSTER_SOFT_START); // boost soft start
-	EPD_4IN2_SendData(0x17);		//A
-	EPD_4IN2_SendData(0x17);		//B
-	EPD_4IN2_SendData(0x17);		//C
-
-	EPD_4IN2_SendCommand(POWER_ON); // POWER_ON
-	EPD_4IN2_ReadBusy();
-
-	EPD_4IN2_SendCommand(PANEL_SETTING); // panel setting
-	EPD_4IN2_SendData(0xbf); // KW-BF   KWR-AF	BWROTP 0f	BWOTP 1f
-	EPD_4IN2_SendData(0x0d);
-
-	EPD_4IN2_SendCommand(PLL_CONTROL); // PLL setting
-	EPD_4IN2_SendData(0x3C); // 3A 100HZ   29 150Hz 39 200HZ	31 171HZ
-
-	EPD_4IN2_SendCommand(RESOLUTION_SETTING); // resolution setting
-	EPD_4IN2_SendData(0x01);
-	EPD_4IN2_SendData(0x90); //128
-	EPD_4IN2_SendData(0x01); //
-	EPD_4IN2_SendData(0x2c);
-
-	EPD_4IN2_SendCommand(VCM_DC_SETTING); // vcom_DC setting
-	EPD_4IN2_SendData(0x28);
-
-	EPD_4IN2_SendCommand(VCOM_AND_DATA_INTERVAL_SETTING); // VCOM AND DATA INTERVAL SETTING
-	EPD_4IN2_SendData(0x97); // 97white border 77black border		VBDF 17|D7 VBDW 97 VBDB 57		VBDF F7 VBDW 77 VBDB 37  VBDR B7
-
-	EPD_4IN2_SetLut();
-}
-
-void EPD_4IN2_Init_4Gray(void) {
-	EPD_4IN2_Reset();
-	EPD_4IN2_SendCommand(POWER_SETTING);			//POWER SETTING
-	EPD_4IN2_SendData(0x03);
-	EPD_4IN2_SendData(0x00);       //VGH=20V,VGL=-20V
-	EPD_4IN2_SendData(0x2b);       //VDH=15V
-	EPD_4IN2_SendData(0x2b);		//VDL=-15V
-	EPD_4IN2_SendData(DATA_START_TRANSMISSION_2);
-
-	EPD_4IN2_SendCommand(BOOSTER_SOFT_START);         //booster soft start
+	EPD_4IN2_SendCommand(BOOSTER_SOFT_START);
 	EPD_4IN2_SendData(0x17);		//A
 	EPD_4IN2_SendData(0x17);		//B
 	EPD_4IN2_SendData(0x17);		//C
@@ -308,22 +269,61 @@ void EPD_4IN2_Init_4Gray(void) {
 	EPD_4IN2_SendCommand(POWER_ON);
 	EPD_4IN2_ReadBusy();
 
-	EPD_4IN2_SendCommand(PANEL_SETTING);			//panel setting
+	EPD_4IN2_SendCommand(PANEL_SETTING);
+	EPD_4IN2_SendData(0xbf); // KW-BF   KWR-AF	BWROTP 0f	BWOTP 1f
+	EPD_4IN2_SendData(0x0d);
+
+	EPD_4IN2_SendCommand(PLL_CONTROL);
+	EPD_4IN2_SendData(0x3C); // 3A 100HZ   29 150Hz 39 200HZ	31 171HZ
+
+	EPD_4IN2_SendCommand(RESOLUTION_SETTING);
+	EPD_4IN2_SendData(0x01);
+	EPD_4IN2_SendData(0x90); //128
+	EPD_4IN2_SendData(0x01);
+	EPD_4IN2_SendData(0x2c);
+
+	EPD_4IN2_SendCommand(VCM_DC_SETTING);
+	EPD_4IN2_SendData(0x28);
+
+	EPD_4IN2_SendCommand(VCOM_AND_DATA_INTERVAL_SETTING);
+	EPD_4IN2_SendData(0x97); // 97white border 77black border		VBDF 17|D7 VBDW 97 VBDB 57		VBDF F7 VBDW 77 VBDB 37  VBDR B7
+
+	EPD_4IN2_SetLut();
+}
+
+void EPD_4IN2_Init_4Gray(void) {
+	EPD_4IN2_Reset();
+	EPD_4IN2_SendCommand(POWER_SETTING);
+	EPD_4IN2_SendData(0x03);
+	EPD_4IN2_SendData(0x00);       //VGH=20V,VGL=-20V
+	EPD_4IN2_SendData(0x2b);       //VDH=15V
+	EPD_4IN2_SendData(0x2b);		//VDL=-15V
+	EPD_4IN2_SendData(DATA_START_TRANSMISSION_2);
+
+	EPD_4IN2_SendCommand(BOOSTER_SOFT_START);
+	EPD_4IN2_SendData(0x17);		//A
+	EPD_4IN2_SendData(0x17);		//B
+	EPD_4IN2_SendData(0x17);		//C
+
+	EPD_4IN2_SendCommand(POWER_ON);
+	EPD_4IN2_ReadBusy();
+
+	EPD_4IN2_SendCommand(PANEL_SETTING);
 	EPD_4IN2_SendData(0x3f);		//KW-3f   KWR-2F	BWROTP 0f	BWOTP 1f
 
-	EPD_4IN2_SendCommand(PLL_CONTROL);			//PLL setting
+	EPD_4IN2_SendCommand(PLL_CONTROL);
 	EPD_4IN2_SendData(0x3c);      	//100hz
 
-	EPD_4IN2_SendCommand(RESOLUTION_SETTING);			//resolution setting
+	EPD_4IN2_SendCommand(RESOLUTION_SETTING);
 	EPD_4IN2_SendData(0x01);		//400
 	EPD_4IN2_SendData(0x90);
 	EPD_4IN2_SendData(0x01);		//300
 	EPD_4IN2_SendData(0x2c);
 
-	EPD_4IN2_SendCommand(VCM_DC_SETTING);			//vcom_DC setting
+	EPD_4IN2_SendCommand(VCM_DC_SETTING);
 	EPD_4IN2_SendData(DISPLAY_REFRESH);
 
-	EPD_4IN2_SendCommand(VCOM_AND_DATA_INTERVAL_SETTING);		//VCOM AND DATA INTERVAL SETTING
+	EPD_4IN2_SendCommand(VCOM_AND_DATA_INTERVAL_SETTING);
 	EPD_4IN2_SendData(0x97);
 }
 /******************************************************************************
@@ -349,7 +349,7 @@ void EPD_4IN2_Clear(void) {
 			EPD_4IN2_SendData(0xFF);
 		}
 	}
-	EPD_4IN2_SendCommand(DISPLAY_REFRESH);		 //DISPLAY REFRESH
+	EPD_4IN2_SendCommand(DISPLAY_REFRESH);
 	DEV_Delay_ms(10);
 	EPD_4IN2_TurnOnDisplay();
 }
@@ -388,7 +388,7 @@ UWORD Y_end, UBYTE *Image) {
 	EPD_4IN2_SendData(0xf7);
 	DEV_Delay_ms(100);
 
-	EPD_4IN2_SendCommand(VCM_DC_SETTING);			//vcom_DC setting
+	EPD_4IN2_SendCommand(VCM_DC_SETTING);
 	EPD_4IN2_SendData(0x08);
 	EPD_4IN2_SendCommand(VCOM_AND_DATA_INTERVAL_SETTING);
 	EPD_4IN2_SendData(0x47);
@@ -421,8 +421,8 @@ UWORD Y_end, UBYTE *Image) {
 		}
 	}
 
-	EPD_4IN2_SendCommand(DISPLAY_REFRESH);		 //DISPLAY REFRESH
-	DEV_Delay_ms(10);     //The delay here is necessary, 200uS at least!!!     
+	EPD_4IN2_SendCommand(DISPLAY_REFRESH);
+	DEV_Delay_ms(10);     //The delay here is necessary, 200uS at least!!!
 	EPD_4IN2_TurnOnDisplay();
 }
 
@@ -523,8 +523,8 @@ void EPD_4IN2_4GrayDisplay(const UBYTE *Image) {
  parameter:
  ******************************************************************************/
 void EPD_4IN2_Sleep(void) {
-	EPD_4IN2_SendCommand(POWER_OFF); // POWER_OFF
+	EPD_4IN2_SendCommand(POWER_OFF);
 	EPD_4IN2_ReadBusy();
-	EPD_4IN2_SendCommand(DEEP_SLEEP); // DEEP_SLEEP
+	EPD_4IN2_SendCommand(DEEP_SLEEP);
 	EPD_4IN2_SendData(0XA5);
 }
