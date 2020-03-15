@@ -66,53 +66,6 @@ static void MX_USART2_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-/**
- * Configures GPIO pins PA8 and PA9 for a rotary encoder, returning the config.
- */
-GPIO_InitTypeDef configuredGPIO() {
-	GPIO_InitTypeDef config;
-
-	config.Pin = GPIO_PIN_8 | GPIO_PIN_9;
-	config.Mode = GPIO_MODE_AF_PP;
-	config.Pull = GPIO_PULLUP;
-	config.Speed = GPIO_SPEED_HIGH;
-	config.Alternate = GPIO_AF1_TIM1;
-
-	return config;
-}
-
-/**
- * Configures TIM1 for a rotary encoder, returning the config.
- */
-TIM_HandleTypeDef configuredTimer() {
-	TIM_HandleTypeDef timer;
-
-	timer.Instance = TIM1;
-	timer.Init.Period = 0xffff;
-	timer.Init.Prescaler = 0;
-	timer.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-	timer.Init.CounterMode = TIM_COUNTERMODE_UP;
-
-	return timer;
-}
-
-/**
- * Configures TM1's encoder mode for a rotary encoder, returning
- * the config.
- */
-TIM_Encoder_InitTypeDef configuredEncoder() {
-	TIM_Encoder_InitTypeDef encoder;
-
-	encoder.EncoderMode = TIM_ENCODERMODE_TI1;
-
-	encoder.IC1Filter = 0x0f;
-	encoder.IC1Polarity = TIM_INPUTCHANNELPOLARITY_RISING;
-	encoder.IC1Prescaler = TIM_ICPSC_DIV4;
-	encoder.IC1Selection = TIM_ICSELECTION_DIRECTTI;
-
-	return encoder;
-}
-
 /* USER CODE END 0 */
 
 /**
@@ -148,25 +101,19 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-	GPIO_InitTypeDef gpio = configuredGPIO();
-	TIM_HandleTypeDef timer = configuredTimer();
-	TIM_Encoder_InitTypeDef encoder = configuredEncoder();
+	HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_1);
 
-	HAL_GPIO_Init(GPIOA, &gpio);
-	HAL_TIM_Encoder_Init(&timer, &encoder);
-	HAL_TIM_Encoder_Start(&timer, TIM_CHANNEL_1);
-
-	EPD_4in2_test();
+//	EPD_4in2_test();
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
-//		int16_t count = TIM1->CNT;
-//		int dir = (TIM1->CR1 >> 4UL) & 0x1UL;
+		int16_t count = TIM1->CNT;
+		int dir = (TIM1->CR1 >> 4UL) & 0x1UL;
 
-//		printf("count: %d dir: %d\r\n", count / 2, dir);
+		printf("count: %d dir: %d\r\n", count / 2, dir);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -276,15 +223,15 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 0;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 0;
+  htim1.Init.Period = 65535;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  sConfig.EncoderMode = TIM_ENCODERMODE_TI12;
+  sConfig.EncoderMode = TIM_ENCODERMODE_TI1;
   sConfig.IC1Polarity = TIM_ICPOLARITY_RISING;
   sConfig.IC1Selection = TIM_ICSELECTION_DIRECTTI;
   sConfig.IC1Prescaler = TIM_ICPSC_DIV4;
-  sConfig.IC1Filter = 0;
+  sConfig.IC1Filter = 14;
   sConfig.IC2Polarity = TIM_ICPOLARITY_FALLING;
   sConfig.IC2Selection = TIM_ICSELECTION_DIRECTTI;
   sConfig.IC2Prescaler = TIM_ICPSC_DIV4;
