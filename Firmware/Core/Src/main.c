@@ -26,6 +26,7 @@
 #include  <errno.h>
 #include  <sys/unistd.h> // STDOUT_FILENO, STDERR_FILENO
 #include "../User/Examples/EPD_Test.h"
+#include "../User/e-Paper/EPD_4in2.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -65,6 +66,7 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+UBYTE *imageCache;
 
 /* USER CODE END 0 */
 
@@ -104,6 +106,47 @@ int main(void) {
 
 //	EPD_4in2_test();
 
+	printf("EPD_4IN2_test Demo\r\n");
+	if (DEV_Module_Init() != 0) {
+		return -1;
+	}
+
+	printf("e-Paper Init and Clear...\r\n");
+	EPD_4IN2_Init();
+	EPD_4IN2_Clear();
+	DEV_Delay_ms(500);
+
+//	UBYTE *imageCache;
+	UWORD imageSize = (
+			(EPD_4IN2_WIDTH % 8 == 0) ?
+					(EPD_4IN2_WIDTH / 8) : (EPD_4IN2_WIDTH / 8 + 1))
+			* EPD_4IN2_HEIGHT;
+	if ((imageCache = (UBYTE*) malloc(imageSize)) == NULL) {
+		printf("failed to allocate memory for imageCache\r\n");
+		return;
+	}
+
+	Paint_NewImage(imageCache, EPD_4IN2_WIDTH, EPD_4IN2_HEIGHT, 0, WHITE);
+	Paint_SelectImage(imageCache);
+	Paint_Clear(WHITE);
+
+	for (int x = 10; x < 100; x++) {
+		Paint_DrawPoint(x, 80, BLACK, DOT_PIXEL_1X1, DOT_STYLE_DFT);
+		EPD_4IN2_PartialDisplay(0, 50, 200, 100, imageCache);
+
+		DEV_Delay_ms(50);
+	}
+
+//	EPD_4IN2_Display(imageCache);
+
+//	printf("Goto Sleep...\r\n");
+//	EPD_4IN2_Sleep();
+//	free(imageCache);
+//	imageCache = NULL;
+//
+//	// close 5V
+//	printf("close 5V, Module enters 0 power consumption ...\r\n");
+//	DEV_Module_Exit();
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
