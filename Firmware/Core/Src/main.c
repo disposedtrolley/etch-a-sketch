@@ -70,14 +70,13 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-UBYTE *imageCache;
 
 /* USER CODE END 0 */
 
 /**
- * @brief  The application entry point.
- * @retval int
- */
+  * @brief  The application entry point.
+  * @retval int
+  */
 int main(void) {
     /* USER CODE BEGIN 1 */
 
@@ -108,49 +107,6 @@ int main(void) {
 
     HAL_TIM_Encoder_Start_IT(&htim1, TIM_CHANNEL_1);
 
-//	EPD_4in2_test();
-
-    printf("EPD_4IN2_test Demo\r\n");
-    if (DEV_Module_Init() != 0) {
-        return -1;
-    }
-
-    printf("e-Paper Init and Clear...\r\n");
-    EPD_4IN2_Init();
-    EPD_4IN2_Clear();
-    DEV_Delay_ms(500);
-
-//	UBYTE *imageCache;
-    UWORD imageSize = (
-                              (EPD_4IN2_WIDTH % 8 == 0) ?
-                              (EPD_4IN2_WIDTH / 8) : (EPD_4IN2_WIDTH / 8 + 1))
-                      * EPD_4IN2_HEIGHT;
-    if ((imageCache = (UBYTE *) malloc(imageSize)) == NULL) {
-        printf("failed to allocate memory for imageCache\r\n");
-        return;
-    }
-
-    Paint_NewImage(imageCache, EPD_4IN2_WIDTH, EPD_4IN2_HEIGHT, 0, WHITE);
-    Paint_SelectImage(imageCache);
-    Paint_Clear(WHITE);
-
-    for (int x = 10; x < 100; x++) {
-        Paint_DrawPoint(x, 80, BLACK, DOT_PIXEL_1X1, DOT_STYLE_DFT);
-        EPD_4IN2_PartialDisplay(0, 50, 200, 100, imageCache);
-
-        DEV_Delay_ms(50);
-    }
-
-//	EPD_4IN2_Display(imageCache);
-
-//	printf("Goto Sleep...\r\n");
-//	EPD_4IN2_Sleep();
-//	free(imageCache);
-//	imageCache = NULL;
-//
-//	// close 5V
-//	printf("close 5V, Module enters 0 power consumption ...\r\n");
-//	DEV_Module_Exit();
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -165,19 +121,19 @@ int main(void) {
 }
 
 /**
- * @brief System Clock Configuration
- * @retval None
- */
+  * @brief System Clock Configuration
+  * @retval None
+  */
 void SystemClock_Config(void) {
     RCC_OscInitTypeDef RCC_OscInitStruct = {0};
     RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
     /** Configure the main internal regulator output voltage
-     */
+    */
     __HAL_RCC_PWR_CLK_ENABLE();
     __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
     /** Initializes the CPU, AHB and APB busses clocks
-     */
+    */
     RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
     RCC_OscInitStruct.HSIState = RCC_HSI_ON;
     RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
@@ -191,7 +147,7 @@ void SystemClock_Config(void) {
         Error_Handler();
     }
     /** Initializes the CPU, AHB and APB busses clocks
-     */
+    */
     RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
                                   | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
     RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
@@ -205,10 +161,10 @@ void SystemClock_Config(void) {
 }
 
 /**
- * @brief SPI1 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief SPI1 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_SPI1_Init(void) {
 
     /* USER CODE BEGIN SPI1_Init 0 */
@@ -241,10 +197,10 @@ static void MX_SPI1_Init(void) {
 }
 
 /**
- * @brief TIM1 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief TIM1 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_TIM1_Init(void) {
 
     /* USER CODE BEGIN TIM1_Init 0 */
@@ -278,8 +234,7 @@ static void MX_TIM1_Init(void) {
     }
     sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
     sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-    if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig)
-        != HAL_OK) {
+    if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK) {
         Error_Handler();
     }
     /* USER CODE BEGIN TIM1_Init 2 */
@@ -289,10 +244,10 @@ static void MX_TIM1_Init(void) {
 }
 
 /**
- * @brief USART2 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief USART2 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_USART2_UART_Init(void) {
 
     /* USER CODE BEGIN USART2_Init 0 */
@@ -320,10 +275,10 @@ static void MX_USART2_UART_Init(void) {
 }
 
 /**
- * @brief GPIO Initialization Function
- * @param None
- * @retval None
- */
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_GPIO_Init(void) {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
 
@@ -369,11 +324,51 @@ static void MX_GPIO_Init(void) {
 
 /* USER CODE BEGIN 4 */
 
-void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
-    int16_t count = TIM1->CNT;
-    int dir = (TIM1->CR1 >> 4UL) & 0x1UL;
+int ePaperAnimation() {
+    UBYTE *imageCache;
 
-    printf("count: %d dir: %d\r\n", count / 2, dir);
+    if (DEV_Module_Init() != 0) {
+        return -1;
+    }
+
+    printf("e-Paper Init and Clear...\r\n");
+    EPD_4IN2_Init();
+    EPD_4IN2_Clear();
+    DEV_Delay_ms(500);
+
+//	UBYTE *imageCache;
+    UWORD imageSize = (
+                              (EPD_4IN2_WIDTH % 8 == 0) ?
+                              (EPD_4IN2_WIDTH / 8) : (EPD_4IN2_WIDTH / 8 + 1))
+                      * EPD_4IN2_HEIGHT;
+    if ((imageCache = (UBYTE *) malloc(imageSize)) == NULL) {
+        printf("failed to allocate memory for imageCache\r\n");
+        return;
+    }
+
+    Paint_NewImage(imageCache, EPD_4IN2_WIDTH, EPD_4IN2_HEIGHT, 0, WHITE);
+    Paint_SelectImage(imageCache);
+    Paint_Clear(WHITE);
+
+    for (int x = 10; x < 100; x++) {
+        Paint_DrawPoint(x, 80, BLACK, DOT_PIXEL_1X1, DOT_STYLE_DFT);
+        EPD_4IN2_PartialDisplay(0, 50, 200, 100, imageCache);
+
+        DEV_Delay_ms(50);
+    }
+
+    DEV_Module_Exit();
+}
+
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
+    if (htim->Instance == TIM1) {
+        int16_t count = TIM1->CNT;
+        int dir = (TIM1->CR1 >> 4UL) & 0x1UL;
+
+        printf("count: %d dir: %d\r\n", count / 2, dir);
+
+        ePaperAnimation();
+    }
 }
 
 /**
@@ -399,9 +394,9 @@ int _write(int file, char *data, int len) {
 /* USER CODE END 4 */
 
 /**
- * @brief  This function is executed in case of error occurrence.
- * @retval None
- */
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
 void Error_Handler(void) {
     /* USER CODE BEGIN Error_Handler_Debug */
     /* User can add his own implementation to report the HAL error return state */
