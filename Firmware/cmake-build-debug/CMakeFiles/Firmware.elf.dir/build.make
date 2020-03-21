@@ -122,9 +122,139 @@ CMakeFiles/Firmware.elf.dir/Core/Src/system_stm32f4xx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Firmware.elf.dir/Core/Src/system_stm32f4xx.c.s"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/Src/system_stm32f4xx.c -o CMakeFiles/Firmware.elf.dir/Core/Src/system_stm32f4xx.c.s
 
+CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
+CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.obj: ../Core/User/Config/DEV_Config.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.obj"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Config/DEV_Config.c
+
+CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.i"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Config/DEV_Config.c > CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.i
+
+CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.s"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Config/DEV_Config.c -o CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.s
+
+CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
+CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.obj: ../Core/User/Examples/EPD_4in2_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.obj"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Examples/EPD_4in2_test.c
+
+CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.i"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Examples/EPD_4in2_test.c > CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.i
+
+CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.s"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Examples/EPD_4in2_test.c -o CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.s
+
+CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
+CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.obj: ../Core/User/Examples/ImageData.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.obj"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Examples/ImageData.c
+
+CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.i"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Examples/ImageData.c > CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.i
+
+CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.s"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Examples/ImageData.c -o CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.s
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.obj: ../Core/User/Fonts/font12.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.obj"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font12.c
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.i"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font12.c > CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.i
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.s"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font12.c -o CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.s
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.obj: ../Core/User/Fonts/font16.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.obj"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font16.c
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.i"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font16.c > CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.i
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.s"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font16.c -o CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.s
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.obj: ../Core/User/Fonts/font20.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.obj"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font20.c
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.i"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font20.c > CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.i
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.s"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font20.c -o CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.s
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.obj: ../Core/User/Fonts/font24.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.obj"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font24.c
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.i"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font24.c > CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.i
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.s"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font24.c -o CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.s
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.obj: ../Core/User/Fonts/font8.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.obj"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font8.c
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.i"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font8.c > CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.i
+
+CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.s"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/Fonts/font8.c -o CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.s
+
+CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
+CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.obj: ../Core/User/GUI/GUI_Paint.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.obj"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/GUI/GUI_Paint.c
+
+CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.i"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/GUI/GUI_Paint.c > CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.i
+
+CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.s"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/GUI/GUI_Paint.c -o CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.s
+
+CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
+CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.obj: ../Core/User/e-Paper/EPD_4in2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.obj"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/e-Paper/EPD_4in2.c
+
+CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.i"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/e-Paper/EPD_4in2.c > CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.i
+
+CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.s"
+	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/james/projects/embedded/etch-a-sketch/Firmware/Core/User/e-Paper/EPD_4in2.c -o CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.s
+
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i: cmake_force
@@ -137,7 +267,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s: 
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i: cmake_force
@@ -150,7 +280,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_corte
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i: cmake_force
@@ -163,7 +293,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i: cmake_force
@@ -176,7 +306,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_e
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i: cmake_force
@@ -189,7 +319,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i: cmake_force
@@ -202,7 +332,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i: cmake_force
@@ -215,7 +345,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i: cmake_force
@@ -228,7 +358,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i: cmake_force
@@ -241,7 +371,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i: cmake_force
@@ -254,7 +384,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i: cmake_force
@@ -267,7 +397,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_e
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i: cmake_force
@@ -280,7 +410,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i: cmake_force
@@ -293,7 +423,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_e
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i: cmake_force
@@ -306,7 +436,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i: cmake_force
@@ -319,7 +449,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i: cmake_force
@@ -332,7 +462,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_e
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj   -c /Users/james/projects/embedded/etch-a-sketch/Firmware/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
 
 CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i: cmake_force
@@ -345,7 +475,7 @@ CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.
 
 CMakeFiles/Firmware.elf.dir/startup/startup_stm32f401xe.s.obj: CMakeFiles/Firmware.elf.dir/flags.make
 CMakeFiles/Firmware.elf.dir/startup/startup_stm32f401xe.s.obj: ../startup/startup_stm32f401xe.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building ASM object CMakeFiles/Firmware.elf.dir/startup/startup_stm32f401xe.s.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building ASM object CMakeFiles/Firmware.elf.dir/startup/startup_stm32f401xe.s.obj"
 	/usr/local/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/Firmware.elf.dir/startup/startup_stm32f401xe.s.obj -c /Users/james/projects/embedded/etch-a-sketch/Firmware/startup/startup_stm32f401xe.s
 
 # Object files for target Firmware.elf
@@ -355,6 +485,16 @@ Firmware_elf_OBJECTS = \
 "CMakeFiles/Firmware.elf.dir/Core/Src/stm32f4xx_it.c.obj" \
 "CMakeFiles/Firmware.elf.dir/Core/Src/syscalls.c.obj" \
 "CMakeFiles/Firmware.elf.dir/Core/Src/system_stm32f4xx.c.obj" \
+"CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.obj" \
+"CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.obj" \
+"CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.obj" \
+"CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.obj" \
+"CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.obj" \
+"CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.obj" \
+"CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.obj" \
+"CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.obj" \
+"CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.obj" \
+"CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.obj" \
 "CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj" \
 "CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj" \
 "CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj" \
@@ -382,6 +522,16 @@ Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
 Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/Src/stm32f4xx_it.c.obj
 Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/Src/syscalls.c.obj
 Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/Src/system_stm32f4xx.c.obj
+Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.obj
+Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.obj
+Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.obj
+Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.obj
+Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.obj
+Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.obj
+Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.obj
+Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.obj
+Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.obj
+Firmware.elf: CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.obj
 Firmware.elf: CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
 Firmware.elf: CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
 Firmware.elf: CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
@@ -402,7 +552,7 @@ Firmware.elf: CMakeFiles/Firmware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32
 Firmware.elf: CMakeFiles/Firmware.elf.dir/startup/startup_stm32f401xe.s.obj
 Firmware.elf: CMakeFiles/Firmware.elf.dir/build.make
 Firmware.elf: CMakeFiles/Firmware.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking C executable Firmware.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Linking C executable Firmware.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Firmware.elf.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building /Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/Firmware.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building /Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/Firmware.bin"

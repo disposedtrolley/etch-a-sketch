@@ -258,6 +258,276 @@ Core/Src/system_stm32f4xx.c.s:
 	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/Src/system_stm32f4xx.c.s
 .PHONY : Core/Src/system_stm32f4xx.c.s
 
+Core/User/Config/DEV_Config.obj: Core/User/Config/DEV_Config.c.obj
+
+.PHONY : Core/User/Config/DEV_Config.obj
+
+# target to build an object file
+Core/User/Config/DEV_Config.c.obj:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.obj
+.PHONY : Core/User/Config/DEV_Config.c.obj
+
+Core/User/Config/DEV_Config.i: Core/User/Config/DEV_Config.c.i
+
+.PHONY : Core/User/Config/DEV_Config.i
+
+# target to preprocess a source file
+Core/User/Config/DEV_Config.c.i:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.i
+.PHONY : Core/User/Config/DEV_Config.c.i
+
+Core/User/Config/DEV_Config.s: Core/User/Config/DEV_Config.c.s
+
+.PHONY : Core/User/Config/DEV_Config.s
+
+# target to generate assembly for a file
+Core/User/Config/DEV_Config.c.s:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Config/DEV_Config.c.s
+.PHONY : Core/User/Config/DEV_Config.c.s
+
+Core/User/Examples/EPD_4in2_test.obj: Core/User/Examples/EPD_4in2_test.c.obj
+
+.PHONY : Core/User/Examples/EPD_4in2_test.obj
+
+# target to build an object file
+Core/User/Examples/EPD_4in2_test.c.obj:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.obj
+.PHONY : Core/User/Examples/EPD_4in2_test.c.obj
+
+Core/User/Examples/EPD_4in2_test.i: Core/User/Examples/EPD_4in2_test.c.i
+
+.PHONY : Core/User/Examples/EPD_4in2_test.i
+
+# target to preprocess a source file
+Core/User/Examples/EPD_4in2_test.c.i:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.i
+.PHONY : Core/User/Examples/EPD_4in2_test.c.i
+
+Core/User/Examples/EPD_4in2_test.s: Core/User/Examples/EPD_4in2_test.c.s
+
+.PHONY : Core/User/Examples/EPD_4in2_test.s
+
+# target to generate assembly for a file
+Core/User/Examples/EPD_4in2_test.c.s:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Examples/EPD_4in2_test.c.s
+.PHONY : Core/User/Examples/EPD_4in2_test.c.s
+
+Core/User/Examples/ImageData.obj: Core/User/Examples/ImageData.c.obj
+
+.PHONY : Core/User/Examples/ImageData.obj
+
+# target to build an object file
+Core/User/Examples/ImageData.c.obj:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.obj
+.PHONY : Core/User/Examples/ImageData.c.obj
+
+Core/User/Examples/ImageData.i: Core/User/Examples/ImageData.c.i
+
+.PHONY : Core/User/Examples/ImageData.i
+
+# target to preprocess a source file
+Core/User/Examples/ImageData.c.i:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.i
+.PHONY : Core/User/Examples/ImageData.c.i
+
+Core/User/Examples/ImageData.s: Core/User/Examples/ImageData.c.s
+
+.PHONY : Core/User/Examples/ImageData.s
+
+# target to generate assembly for a file
+Core/User/Examples/ImageData.c.s:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Examples/ImageData.c.s
+.PHONY : Core/User/Examples/ImageData.c.s
+
+Core/User/Fonts/font12.obj: Core/User/Fonts/font12.c.obj
+
+.PHONY : Core/User/Fonts/font12.obj
+
+# target to build an object file
+Core/User/Fonts/font12.c.obj:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.obj
+.PHONY : Core/User/Fonts/font12.c.obj
+
+Core/User/Fonts/font12.i: Core/User/Fonts/font12.c.i
+
+.PHONY : Core/User/Fonts/font12.i
+
+# target to preprocess a source file
+Core/User/Fonts/font12.c.i:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.i
+.PHONY : Core/User/Fonts/font12.c.i
+
+Core/User/Fonts/font12.s: Core/User/Fonts/font12.c.s
+
+.PHONY : Core/User/Fonts/font12.s
+
+# target to generate assembly for a file
+Core/User/Fonts/font12.c.s:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font12.c.s
+.PHONY : Core/User/Fonts/font12.c.s
+
+Core/User/Fonts/font16.obj: Core/User/Fonts/font16.c.obj
+
+.PHONY : Core/User/Fonts/font16.obj
+
+# target to build an object file
+Core/User/Fonts/font16.c.obj:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.obj
+.PHONY : Core/User/Fonts/font16.c.obj
+
+Core/User/Fonts/font16.i: Core/User/Fonts/font16.c.i
+
+.PHONY : Core/User/Fonts/font16.i
+
+# target to preprocess a source file
+Core/User/Fonts/font16.c.i:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.i
+.PHONY : Core/User/Fonts/font16.c.i
+
+Core/User/Fonts/font16.s: Core/User/Fonts/font16.c.s
+
+.PHONY : Core/User/Fonts/font16.s
+
+# target to generate assembly for a file
+Core/User/Fonts/font16.c.s:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font16.c.s
+.PHONY : Core/User/Fonts/font16.c.s
+
+Core/User/Fonts/font20.obj: Core/User/Fonts/font20.c.obj
+
+.PHONY : Core/User/Fonts/font20.obj
+
+# target to build an object file
+Core/User/Fonts/font20.c.obj:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.obj
+.PHONY : Core/User/Fonts/font20.c.obj
+
+Core/User/Fonts/font20.i: Core/User/Fonts/font20.c.i
+
+.PHONY : Core/User/Fonts/font20.i
+
+# target to preprocess a source file
+Core/User/Fonts/font20.c.i:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.i
+.PHONY : Core/User/Fonts/font20.c.i
+
+Core/User/Fonts/font20.s: Core/User/Fonts/font20.c.s
+
+.PHONY : Core/User/Fonts/font20.s
+
+# target to generate assembly for a file
+Core/User/Fonts/font20.c.s:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font20.c.s
+.PHONY : Core/User/Fonts/font20.c.s
+
+Core/User/Fonts/font24.obj: Core/User/Fonts/font24.c.obj
+
+.PHONY : Core/User/Fonts/font24.obj
+
+# target to build an object file
+Core/User/Fonts/font24.c.obj:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.obj
+.PHONY : Core/User/Fonts/font24.c.obj
+
+Core/User/Fonts/font24.i: Core/User/Fonts/font24.c.i
+
+.PHONY : Core/User/Fonts/font24.i
+
+# target to preprocess a source file
+Core/User/Fonts/font24.c.i:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.i
+.PHONY : Core/User/Fonts/font24.c.i
+
+Core/User/Fonts/font24.s: Core/User/Fonts/font24.c.s
+
+.PHONY : Core/User/Fonts/font24.s
+
+# target to generate assembly for a file
+Core/User/Fonts/font24.c.s:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font24.c.s
+.PHONY : Core/User/Fonts/font24.c.s
+
+Core/User/Fonts/font8.obj: Core/User/Fonts/font8.c.obj
+
+.PHONY : Core/User/Fonts/font8.obj
+
+# target to build an object file
+Core/User/Fonts/font8.c.obj:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.obj
+.PHONY : Core/User/Fonts/font8.c.obj
+
+Core/User/Fonts/font8.i: Core/User/Fonts/font8.c.i
+
+.PHONY : Core/User/Fonts/font8.i
+
+# target to preprocess a source file
+Core/User/Fonts/font8.c.i:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.i
+.PHONY : Core/User/Fonts/font8.c.i
+
+Core/User/Fonts/font8.s: Core/User/Fonts/font8.c.s
+
+.PHONY : Core/User/Fonts/font8.s
+
+# target to generate assembly for a file
+Core/User/Fonts/font8.c.s:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/Fonts/font8.c.s
+.PHONY : Core/User/Fonts/font8.c.s
+
+Core/User/GUI/GUI_Paint.obj: Core/User/GUI/GUI_Paint.c.obj
+
+.PHONY : Core/User/GUI/GUI_Paint.obj
+
+# target to build an object file
+Core/User/GUI/GUI_Paint.c.obj:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.obj
+.PHONY : Core/User/GUI/GUI_Paint.c.obj
+
+Core/User/GUI/GUI_Paint.i: Core/User/GUI/GUI_Paint.c.i
+
+.PHONY : Core/User/GUI/GUI_Paint.i
+
+# target to preprocess a source file
+Core/User/GUI/GUI_Paint.c.i:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.i
+.PHONY : Core/User/GUI/GUI_Paint.c.i
+
+Core/User/GUI/GUI_Paint.s: Core/User/GUI/GUI_Paint.c.s
+
+.PHONY : Core/User/GUI/GUI_Paint.s
+
+# target to generate assembly for a file
+Core/User/GUI/GUI_Paint.c.s:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/GUI/GUI_Paint.c.s
+.PHONY : Core/User/GUI/GUI_Paint.c.s
+
+Core/User/e-Paper/EPD_4in2.obj: Core/User/e-Paper/EPD_4in2.c.obj
+
+.PHONY : Core/User/e-Paper/EPD_4in2.obj
+
+# target to build an object file
+Core/User/e-Paper/EPD_4in2.c.obj:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.obj
+.PHONY : Core/User/e-Paper/EPD_4in2.c.obj
+
+Core/User/e-Paper/EPD_4in2.i: Core/User/e-Paper/EPD_4in2.c.i
+
+.PHONY : Core/User/e-Paper/EPD_4in2.i
+
+# target to preprocess a source file
+Core/User/e-Paper/EPD_4in2.c.i:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.i
+.PHONY : Core/User/e-Paper/EPD_4in2.c.i
+
+Core/User/e-Paper/EPD_4in2.s: Core/User/e-Paper/EPD_4in2.c.s
+
+.PHONY : Core/User/e-Paper/EPD_4in2.s
+
+# target to generate assembly for a file
+Core/User/e-Paper/EPD_4in2.c.s:
+	$(MAKE) -f CMakeFiles/Firmware.elf.dir/build.make CMakeFiles/Firmware.elf.dir/Core/User/e-Paper/EPD_4in2.c.s
+.PHONY : Core/User/e-Paper/EPD_4in2.c.s
+
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
 
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj
@@ -750,6 +1020,36 @@ help:
 	@echo "... Core/Src/system_stm32f4xx.obj"
 	@echo "... Core/Src/system_stm32f4xx.i"
 	@echo "... Core/Src/system_stm32f4xx.s"
+	@echo "... Core/User/Config/DEV_Config.obj"
+	@echo "... Core/User/Config/DEV_Config.i"
+	@echo "... Core/User/Config/DEV_Config.s"
+	@echo "... Core/User/Examples/EPD_4in2_test.obj"
+	@echo "... Core/User/Examples/EPD_4in2_test.i"
+	@echo "... Core/User/Examples/EPD_4in2_test.s"
+	@echo "... Core/User/Examples/ImageData.obj"
+	@echo "... Core/User/Examples/ImageData.i"
+	@echo "... Core/User/Examples/ImageData.s"
+	@echo "... Core/User/Fonts/font12.obj"
+	@echo "... Core/User/Fonts/font12.i"
+	@echo "... Core/User/Fonts/font12.s"
+	@echo "... Core/User/Fonts/font16.obj"
+	@echo "... Core/User/Fonts/font16.i"
+	@echo "... Core/User/Fonts/font16.s"
+	@echo "... Core/User/Fonts/font20.obj"
+	@echo "... Core/User/Fonts/font20.i"
+	@echo "... Core/User/Fonts/font20.s"
+	@echo "... Core/User/Fonts/font24.obj"
+	@echo "... Core/User/Fonts/font24.i"
+	@echo "... Core/User/Fonts/font24.s"
+	@echo "... Core/User/Fonts/font8.obj"
+	@echo "... Core/User/Fonts/font8.i"
+	@echo "... Core/User/Fonts/font8.s"
+	@echo "... Core/User/GUI/GUI_Paint.obj"
+	@echo "... Core/User/GUI/GUI_Paint.i"
+	@echo "... Core/User/GUI/GUI_Paint.s"
+	@echo "... Core/User/e-Paper/EPD_4in2.obj"
+	@echo "... Core/User/e-Paper/EPD_4in2.i"
+	@echo "... Core/User/e-Paper/EPD_4in2.s"
 	@echo "... Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj"
 	@echo "... Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.i"
 	@echo "... Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.s"
