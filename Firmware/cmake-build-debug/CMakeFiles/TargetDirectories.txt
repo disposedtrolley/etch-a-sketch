@@ -1,0 +1,3 @@
+/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug/CMakeFiles/Firmware.elf.dir
