@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include  <errno.h>
 #include  <sys/unistd.h> // STDOUT_FILENO, STDERR_FILENO
+#include <stdbool.h>
 #include "../User/Examples/EPD_Test.h"
 #include "../User/e-Paper/EPD_4in2.h"
 /* USER CODE END Includes */
@@ -54,6 +55,16 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 volatile UBYTE *imageCache;
 volatile int x = 10;
+volatile bool shouldDraw = false;
+volatile int prevCount = 0;
+enum DrawDirection {
+    Left,
+    Right,
+    Up,
+    Down
+};
+volatile enum DrawDirection dir;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -121,12 +132,17 @@ int main(void) {
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1) {
-        Paint_DrawPoint(x, 80, BLACK, DOT_PIXEL_1X1, DOT_STYLE_DFT);
-        EPD_4IN2_PartialDisplay(0, 50, 200, 100, imageCache);
+        if (shouldDraw) {
+            Paint_DrawPoint(x, 80, BLACK, DOT_PIXEL_1X1, DOT_STYLE_DFT);
+            EPD_4IN2_PartialDisplay(0, 50, 200, 100, imageCache);
 
-        DEV_Delay_ms(50);
+            DEV_Delay_ms(10);
+            x += 5;
 
-        x += 1;
+            shouldDraw = false;
+        }
+
+//        printf("%s\r\n", dir);
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
@@ -375,10 +391,16 @@ int ePaperAnimation() {
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
     if (htim->Instance == TIM1) {
+        // X axis
         int16_t count = TIM1->CNT;
-        int dir = (TIM1->CR1 >> 4UL) & 0x1UL;
+        int rawDir = (TIM1->CR1 >> 4UL) & 0x1UL;
 
-        printf("count: %d dir: %d\r\n", count / 2, dir);
+        shouldDraw = prevCount != count;
+        dir = rawDir > 0 ? Right : Left;
+
+        printf("count: %d rawDir: %d\r\n", count / 2, rawDir);
+
+        prevCount = count;
     }
 }
 
