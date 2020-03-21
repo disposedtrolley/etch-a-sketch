@@ -50,6 +50,9 @@ TIM_HandleTypeDef htim1;
 
 UART_HandleTypeDef huart2;
 
+volatile UBYTE *imageCache;
+volatile int x = 10;
+
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -65,6 +68,8 @@ static void MX_SPI1_Init(void);
 
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
+static int ePaperInit(void);
+static int ePaperAnimation(void);
 
 /* USER CODE END PFP */
 
@@ -107,12 +112,20 @@ int main(void) {
 
     HAL_TIM_Encoder_Start_IT(&htim1, TIM_CHANNEL_1);
 
+    ePaperInit();
+//    ePaperAnimation();
+
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1) {
+        Paint_DrawPoint(x, 80, BLACK, DOT_PIXEL_1X1, DOT_STYLE_DFT);
+        EPD_4IN2_PartialDisplay(0, 50, 200, 100, imageCache);
 
+        DEV_Delay_ms(50);
+
+        x += 1;
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
@@ -324,31 +337,30 @@ static void MX_GPIO_Init(void) {
 
 /* USER CODE BEGIN 4 */
 
-int ePaperAnimation() {
-    UBYTE *imageCache;
-
+int ePaperInit() {
     if (DEV_Module_Init() != 0) {
         return -1;
     }
 
-    printf("e-Paper Init and Clear...\r\n");
+    printf("ePaperInit()\r\n");
     EPD_4IN2_Init();
     EPD_4IN2_Clear();
-    DEV_Delay_ms(500);
+    DEV_Delay_ms(250);
 
-//	UBYTE *imageCache;
-    UWORD imageSize = (
-                              (EPD_4IN2_WIDTH % 8 == 0) ?
-                              (EPD_4IN2_WIDTH / 8) : (EPD_4IN2_WIDTH / 8 + 1))
+    UWORD imageSize = ((EPD_4IN2_WIDTH % 8 == 0) ? (EPD_4IN2_WIDTH / 8) : (EPD_4IN2_WIDTH / 8 + 1))
                       * EPD_4IN2_HEIGHT;
     if ((imageCache = (UBYTE *) malloc(imageSize)) == NULL) {
         printf("failed to allocate memory for imageCache\r\n");
-        return;
+        return -1;
     }
 
     Paint_NewImage(imageCache, EPD_4IN2_WIDTH, EPD_4IN2_HEIGHT, 0, WHITE);
     Paint_SelectImage(imageCache);
     Paint_Clear(WHITE);
+}
+
+int ePaperAnimation() {
+    printf("ePaperAnimation()\r\n");
 
     for (int x = 10; x < 100; x++) {
         Paint_DrawPoint(x, 80, BLACK, DOT_PIXEL_1X1, DOT_STYLE_DFT);
@@ -366,8 +378,6 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
         int dir = (TIM1->CR1 >> 4UL) & 0x1UL;
 
         printf("count: %d dir: %d\r\n", count / 2, dir);
-
-        ePaperAnimation();
     }
 }
 
