@@ -1,4 +1,0 @@
-/usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=arm-none-eabi-gcc -DCMAKE_CXX_COMPILER=arm-none-eabi-g++ -G "CodeBlocks - Unix Makefiles" /Users/james/projects/embedded/etch-a-sketch/Firmware
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/james/projects/embedded/etch-a-sketch/Firmware/cmake-build-debug
