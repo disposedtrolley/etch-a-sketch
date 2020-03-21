@@ -50,11 +50,10 @@ TIM_HandleTypeDef htim1;
 
 UART_HandleTypeDef huart2;
 
-volatile UBYTE *imageCache;
-volatile int x = 10;
 
 /* USER CODE BEGIN PV */
-
+volatile UBYTE *imageCache;
+volatile int x = 10;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -67,8 +66,10 @@ static void MX_TIM1_Init(void);
 static void MX_SPI1_Init(void);
 
 static void MX_USART2_UART_Init(void);
+
 /* USER CODE BEGIN PFP */
 static int ePaperInit(void);
+
 static int ePaperAnimation(void);
 
 /* USER CODE END PFP */
