@@ -64,7 +64,7 @@ void ssd1306_Init(void) {
     ssd1306_WriteCommand(0xA6); //--set normal color
 #endif
 
-    ssd1306_WriteCommand(0xA8); //--set multiplex ratio(1 to 64) - CHECK
+    ssd1306_WriteCommand(0xFF); //--set multiplex ratio(1 to 64) - CHECK
 #if (SSD1306_HEIGHT == 32)
     ssd1306_WriteCommand(0x1F); //
 #elif (SSD1306_HEIGHT == 64)
@@ -75,7 +75,7 @@ void ssd1306_Init(void) {
 
     ssd1306_WriteCommand(0xA4); //0xa4,Output follows RAM content;0xa5,Output ignores RAM content
 
-    ssd1306_WriteCommand(0xD3); //-set display offset - CHECK
+    ssd1306_WriteCommand(0x02); //-set display offset - CHECK
     ssd1306_WriteCommand(0x00); //-not offset
 
     ssd1306_WriteCommand(0xD5); //--set display clock divide ratio/oscillator frequency
