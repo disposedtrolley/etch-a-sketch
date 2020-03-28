@@ -13,23 +13,7 @@
 
 _BEGIN_STD_C
 
-#if defined(STM32F1)
-#include "stm32f1xx_hal.h"
-#elif defined(STM32F4)
 #include "stm32f4xx_hal.h"
-#elif defined(STM32L0)
-#include "stm32l0xx_hal.h"
-#elif defined(STM32L4)
-#include "stm32l4xx_hal.h"
-#elif defined(STM32F3)
-#include "stm32f3xx_hal.h"
-#elif defined(STM32H7)
-#include "stm32h7xx_hal.h"
-#elif defined(STM32F7)
-#include "stm32f7xx_hal.h"
-#else
- #error "SSD1306 library was tested only on STM32F1, STM32F3, STM32F4, STM32F7, STM32L0, STM32L4, STM32H7 MCU families. Please modify ssd1306.h if you know what you are doing. Also please send a pull request if it turns out the library works on other MCU's as well!"
-#endif
 
 #include "ssd1306_fonts.h"
 
@@ -72,15 +56,7 @@ _BEGIN_STD_C
 #define SSD1306_Reset_Pin       GPIO_PIN_8
 #endif
 
-/* ^^^ SPI config ^^^ */
-
-#if defined(SSD1306_USE_I2C)
 extern I2C_HandleTypeDef SSD1306_I2C_PORT;
-#elif defined(SSD1306_USE_SPI)
-extern SPI_HandleTypeDef SSD1306_SPI_PORT;
-#else
-#error "You should define SSD1306_USE_SPI or SSD1306_USE_I2C macro!"
-#endif
 
 // SSD1306 OLED height in pixels
 #ifndef SSD1306_HEIGHT

@@ -26,7 +26,7 @@
 #include <errno.h>
 #include <sys/unistd.h> // STDOUT_FILENO, STDERR_FILENO
 #include <stdbool.h>
-#include "lib/ssd1306/ssd1306.h"
+#include "lib/ssd1306/ssd1306_tests.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -116,6 +116,8 @@ int main(void) {
     /* USER CODE BEGIN 2 */
 
     HAL_TIM_Encoder_Start_IT(&htim1, TIM_CHANNEL_1);
+
+    ssd1306_TestAll();
 
     /* USER CODE END 2 */
 
