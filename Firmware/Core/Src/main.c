@@ -38,8 +38,6 @@ UART_HandleTypeDef huart2;
 volatile int x = 64;
 volatile int y = 64;
 volatile bool shouldDraw = false;
-volatile int prevCountX = 0;
-volatile int prevCountY = 0;
 enum DrawDirection {
     Left,
     Right,
@@ -371,12 +369,11 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
         int16_t count = TIM1->CNT;
         int rawDir = (TIM1->CR1 >> 4UL) & 0x1UL;
 
-        shouldDraw = prevCountX != count;
         dir = rawDir > 0 ? Right : Left;
 
         printf("X :: count: %d rawDir: %d\r\n", count / 2, rawDir);
 
-        prevCountX = count;
+        shouldDraw = true;
     }
 
     if (htim->Instance == TIM3) {
@@ -384,12 +381,11 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
         int16_t count = TIM3->CNT;
         int rawDir = (TIM3->CR1 >> 4UL) & 0x1UL;
 
-        shouldDraw = prevCountY != count;
         dir = rawDir > 0 ? Down : Up;
 
         printf("Y :: count: %d rawDir: %d\r\n", count / 2, rawDir);
 
-        prevCountY = count;
+        shouldDraw = true;
     }
 }
 
