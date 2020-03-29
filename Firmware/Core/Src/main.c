@@ -26,7 +26,7 @@
 #include <errno.h>
 #include <sys/unistd.h> // STDOUT_FILENO, STDERR_FILENO
 #include <stdbool.h>
-#include "lib/ssd1306/ssd1306_tests.h"
+#include "lib/ssd1306/ssd1306.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,7 +51,7 @@ TIM_HandleTypeDef htim1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-volatile int x = 10;
+volatile int x = 64;
 volatile bool shouldDraw = false;
 volatile int prevCount = 0;
 enum DrawDirection {
@@ -117,7 +117,8 @@ int main(void) {
 
     HAL_TIM_Encoder_Start_IT(&htim1, TIM_CHANNEL_1);
 
-    ssd1306_TestAll();
+    ssd1306_Init();
+    ssd1306_Fill(Black);
 
     /* USER CODE END 2 */
 
@@ -126,7 +127,15 @@ int main(void) {
     while (1) {
         if (shouldDraw) {
             printf("shouldDraw: x = %d\r\n", x);
-            x += 5;
+
+            if (dir == Left) {
+                x -= 1;
+            } else {
+                x += 1;
+            }
+
+            ssd1306_DrawPixel(x, 64, White);
+            ssd1306_UpdateScreen();
 
             shouldDraw = false;
         }
