@@ -1,21 +1,4 @@
 /* USER CODE BEGIN Header */
-/**
- ******************************************************************************
- * @file           : main.c
- * @brief          : Main program body
- ******************************************************************************
- * @attention
- *
- * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
- * All rights reserved.</center></h2>
- *
- * This software component is licensed by ST under BSD 3-Clause license,
- * the "License"; You may not use this file except in compliance with the
- * License. You may obtain a copy of the License at:
- *                        opensource.org/licenses/BSD-3-Clause
- *
- ******************************************************************************
- */
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -47,13 +30,16 @@
 I2C_HandleTypeDef hi2c1;
 
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim3;
 
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 volatile int x = 64;
+volatile int y = 64;
 volatile bool shouldDraw = false;
-volatile int prevCount = 0;
+volatile int prevCountX = 0;
+volatile int prevCountY = 0;
 enum DrawDirection {
     Left,
     Right,
@@ -74,6 +60,8 @@ static void MX_TIM1_Init(void);
 static void MX_USART2_UART_Init(void);
 
 static void MX_I2C1_Init(void);
+
+static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -113,8 +101,10 @@ int main(void) {
     MX_TIM1_Init();
     MX_USART2_UART_Init();
     MX_I2C1_Init();
+    MX_TIM3_Init();
     /* USER CODE BEGIN 2 */
 
+    HAL_TIM_Encoder_Start_IT(&htim3, TIM_CHANNEL_1);
     HAL_TIM_Encoder_Start_IT(&htim1, TIM_CHANNEL_1);
 
     ssd1306_Init();
@@ -126,15 +116,24 @@ int main(void) {
     /* USER CODE BEGIN WHILE */
     while (1) {
         if (shouldDraw) {
-            printf("shouldDraw: x = %d\r\n", x);
+            printf("shouldDraw: x = %d y = %d\r\n", x, y);
 
-            if (dir == Left) {
-                x -= 1;
-            } else {
-                x += 1;
+            switch (dir) {
+                case Left:
+                    x -= 1;
+                    break;
+                case Right:
+                    x += 1;
+                    break;
+                case Up:
+                    y -= 1;
+                    break;
+                case Down:
+                    y += 1;
+                    break;
             }
 
-            ssd1306_DrawPixel(x, 64, White);
+            ssd1306_DrawPixel(x, y, White);
             ssd1306_UpdateScreen();
 
             shouldDraw = false;
@@ -266,6 +265,52 @@ static void MX_TIM1_Init(void) {
 }
 
 /**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void) {
+
+    /* USER CODE BEGIN TIM3_Init 0 */
+
+    /* USER CODE END TIM3_Init 0 */
+
+    TIM_Encoder_InitTypeDef sConfig = {0};
+    TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+    /* USER CODE BEGIN TIM3_Init 1 */
+
+    /* USER CODE END TIM3_Init 1 */
+    htim3.Instance = TIM3;
+    htim3.Init.Prescaler = 0;
+    htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+    htim3.Init.Period = 65535;
+    htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV4;
+    htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+    sConfig.EncoderMode = TIM_ENCODERMODE_TI1;
+    sConfig.IC1Polarity = TIM_ICPOLARITY_RISING;
+    sConfig.IC1Selection = TIM_ICSELECTION_DIRECTTI;
+    sConfig.IC1Prescaler = TIM_ICPSC_DIV1;
+    sConfig.IC1Filter = 15;
+    sConfig.IC2Polarity = TIM_ICPOLARITY_RISING;
+    sConfig.IC2Selection = TIM_ICSELECTION_DIRECTTI;
+    sConfig.IC2Prescaler = TIM_ICPSC_DIV1;
+    sConfig.IC2Filter = 0;
+    if (HAL_TIM_Encoder_Init(&htim3, &sConfig) != HAL_OK) {
+        Error_Handler();
+    }
+    sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+    if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK) {
+        Error_Handler();
+    }
+    /* USER CODE BEGIN TIM3_Init 2 */
+
+    /* USER CODE END TIM3_Init 2 */
+
+}
+
+/**
   * @brief USART2 Initialization Function
   * @param None
   * @retval None
@@ -326,12 +371,25 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
         int16_t count = TIM1->CNT;
         int rawDir = (TIM1->CR1 >> 4UL) & 0x1UL;
 
-        shouldDraw = prevCount != count;
+        shouldDraw = prevCountX != count;
         dir = rawDir > 0 ? Right : Left;
 
-        printf("count: %d rawDir: %d\r\n", count / 2, rawDir);
+        printf("X :: count: %d rawDir: %d\r\n", count / 2, rawDir);
 
-        prevCount = count;
+        prevCountX = count;
+    }
+
+    if (htim->Instance == TIM3) {
+        // Y axis
+        int16_t count = TIM3->CNT;
+        int rawDir = (TIM3->CR1 >> 4UL) & 0x1UL;
+
+        shouldDraw = prevCountY != count;
+        dir = rawDir > 0 ? Down : Up;
+
+        printf("Y :: count: %d rawDir: %d\r\n", count / 2, rawDir);
+
+        prevCountY = count;
     }
 }
 
