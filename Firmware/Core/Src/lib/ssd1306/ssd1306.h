@@ -60,7 +60,7 @@ extern I2C_HandleTypeDef SSD1306_I2C_PORT;
 
 // SSD1306 OLED height in pixels
 #ifndef SSD1306_HEIGHT
-#define SSD1306_HEIGHT          64
+#define SSD1306_HEIGHT          128
 #endif
 
 // SSD1306 width in pixels

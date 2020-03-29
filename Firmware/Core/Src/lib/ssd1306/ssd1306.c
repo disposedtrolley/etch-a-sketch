@@ -23,18 +23,18 @@ static SSD1306_t SSD1306;
 
 // Initialize the oled screen
 void ssd1306_Init(void) {
-	// Reset OLED
-	ssd1306_Reset();
+    // Reset OLED
+    ssd1306_Reset();
 
     // Wait for the screen to boot
     HAL_Delay(100);
-    
+
     // Init OLED
     ssd1306_WriteCommand(0xAE); //display off
 
-    ssd1306_WriteCommand(0x20); //Set Memory Addressing Mode   
+    ssd1306_WriteCommand(0x20); //Set Memory Addressing Mode
     ssd1306_WriteCommand(0x00); // 00b,Horizontal Addressing Mode; 01b,Vertical Addressing Mode;
-                                // 10b,Page Addressing Mode (RESET); 11b,Invalid
+    // 10b,Page Addressing Mode (RESET); 11b,Invalid
 
     ssd1306_WriteCommand(0xB0); //Set Page Start Address for Page Addressing Mode,0-7
 
@@ -64,13 +64,22 @@ void ssd1306_Init(void) {
     ssd1306_WriteCommand(0xA6); //--set normal color
 #endif
 
-    ssd1306_WriteCommand(0xFF); //--set multiplex ratio(1 to 64) - CHECK
+// Set multiplex ratio.
+#if (SSD1306_HEIGHT == 128)
+    // Found in the Luma Python lib for SH1106.
+    ssd1306_WriteCommand(0xFF);
+#else
+    ssd1306_WriteCommand(0xA8); //--set multiplex ratio(1 to 64) - CHECK
+#endif
+
 #if (SSD1306_HEIGHT == 32)
     ssd1306_WriteCommand(0x1F); //
 #elif (SSD1306_HEIGHT == 64)
     ssd1306_WriteCommand(0x3F); //
+#elif (SSD1306_HEIGHT == 128)
+    ssd1306_WriteCommand(0x3F); // Seems to work for 128px high displays too.
 #else
-#error "Only 32 or 64 lines of height are supported!"
+#error "Only 32, 64, or 128 lines of height are supported!"
 #endif
 
     ssd1306_WriteCommand(0xA4); //0xa4,Output follows RAM content;0xa5,Output ignores RAM content
@@ -89,8 +98,10 @@ void ssd1306_Init(void) {
     ssd1306_WriteCommand(0x02);
 #elif (SSD1306_HEIGHT == 64)
     ssd1306_WriteCommand(0x12);
+#elif (SSD1306_HEIGHT == 128)
+    ssd1306_WriteCommand(0x12);
 #else
-#error "Only 32 or 64 lines of height are supported!"
+#error "Only 32, 64, or 128 lines of height are supported!"
 #endif
 
     ssd1306_WriteCommand(0xDB); //--set vcomh
@@ -102,14 +113,14 @@ void ssd1306_Init(void) {
 
     // Clear screen
     ssd1306_Fill(Black);
-    
+
     // Flush buffer to screen
     ssd1306_UpdateScreen();
-    
+
     // Set default values for screen object
     SSD1306.CurrentX = 0;
     SSD1306.CurrentY = 0;
-    
+
     SSD1306.Initialized = 1;
 }
 
@@ -125,9 +136,14 @@ void ssd1306_Fill(SSD1306_COLOR color) {
 
 // Write the screenbuffer with changed to the screen
 void ssd1306_UpdateScreen(void) {
-    uint8_t i;
-    for(i = 0; i < 8; i++) {
-        ssd1306_WriteCommand(0xB0 + i);
+    // Write data to each page of RAM. Number of pages
+    // depends on the screen height:
+    //
+    //  * 32px   ==  4 pages
+    //  * 64px   ==  8 pages
+    //  * 128px  ==  16 pages
+    for(uint8_t i = 0; i < SSD1306_HEIGHT/8; i++) {
+        ssd1306_WriteCommand(0xB0 + i); // Set the current RAM page address.
         ssd1306_WriteCommand(0x00);
         ssd1306_WriteCommand(0x10);
         ssd1306_WriteData(&SSD1306_Buffer[SSD1306_WIDTH*i],SSD1306_WIDTH);
@@ -143,16 +159,16 @@ void ssd1306_DrawPixel(uint8_t x, uint8_t y, SSD1306_COLOR color) {
         // Don't write outside the buffer
         return;
     }
-    
+
     // Check if pixel should be inverted
     if(SSD1306.Inverted) {
         color = (SSD1306_COLOR)!color;
     }
-    
+
     // Draw in the right color
     if(color == White) {
         SSD1306_Buffer[x + (y / 8) * SSD1306_WIDTH] |= 1 << (y % 8);
-    } else { 
+    } else {
         SSD1306_Buffer[x + (y / 8) * SSD1306_WIDTH] &= ~(1 << (y % 8));
     }
 }
@@ -163,11 +179,11 @@ void ssd1306_DrawPixel(uint8_t x, uint8_t y, SSD1306_COLOR color) {
 // color    => Black or White
 char ssd1306_WriteChar(char ch, FontDef Font, SSD1306_COLOR color) {
     uint32_t i, b, j;
-    
+
     // Check if character is valid
     if (ch < 32 || ch > 126)
         return 0;
-    
+
     // Check remaining space on current line
     if (SSD1306_WIDTH < (SSD1306.CurrentX + Font.FontWidth) ||
         SSD1306_HEIGHT < (SSD1306.CurrentY + Font.FontHeight))
@@ -175,7 +191,7 @@ char ssd1306_WriteChar(char ch, FontDef Font, SSD1306_COLOR color) {
         // Not enough space on current line
         return 0;
     }
-    
+
     // Use the font to write
     for(i = 0; i < Font.FontHeight; i++) {
         b = Font.data[(ch - 32) * Font.FontHeight + i];
@@ -187,10 +203,10 @@ char ssd1306_WriteChar(char ch, FontDef Font, SSD1306_COLOR color) {
             }
         }
     }
-    
+
     // The current space is now taken
     SSD1306.CurrentX += Font.FontWidth;
-    
+
     // Return written char for validation
     return ch;
 }
@@ -203,11 +219,11 @@ char ssd1306_WriteString(char* str, FontDef Font, SSD1306_COLOR color) {
             // Char could not be written
             return *str;
         }
-        
+
         // Next char
         str++;
     }
-    
+
     // Everything ok
     return *str;
 }
