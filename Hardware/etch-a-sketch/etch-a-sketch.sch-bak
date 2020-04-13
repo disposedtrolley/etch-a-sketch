@@ -56,8 +56,6 @@ NoConn ~ 2850 4500
 NoConn ~ 2850 4400
 NoConn ~ 2850 4300
 NoConn ~ 2850 4200
-NoConn ~ 2850 4100
-NoConn ~ 2850 4000
 NoConn ~ 2850 3900
 NoConn ~ 2850 3800
 NoConn ~ 6400 4450
@@ -278,7 +276,7 @@ Wire Notes Line
 	650  700  650  1800
 Wire Notes Line
 	650  1800 3700 1800
-Text Notes 650  650  0    50   ~ 0
+Text Notes 650  700  0    50   ~ 0
 Input Voltage Regulator
 $Comp
 L power:+3V3 #PWR010
@@ -789,41 +787,30 @@ Wire Wire Line
 	5650 2750 5650 2950
 Connection ~ 5650 2950
 $Comp
-L Connector:Conn_01x05_Female J2
-U 1 1 5EC06E8B
-P 6000 5550
-F 0 "J2" V 5846 5798 50  0000 L CNN
-F 1 "OLED" V 5937 5798 50  0000 L CNN
-F 2 "" H 6000 5550 50  0001 C CNN
-F 3 "~" H 6000 5550 50  0001 C CNN
-	1    6000 5550
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GND #PWR016
 U 1 1 5EC0AEF0
-P 5800 5350
-F 0 "#PWR016" H 5800 5100 50  0001 C CNN
-F 1 "GND" H 5805 5177 50  0000 C CNN
-F 2 "" H 5800 5350 50  0001 C CNN
-F 3 "" H 5800 5350 50  0001 C CNN
-	1    5800 5350
+P 5550 5300
+F 0 "#PWR016" H 5550 5050 50  0001 C CNN
+F 1 "GND" H 5555 5127 50  0000 C CNN
+F 2 "" H 5550 5300 50  0001 C CNN
+F 3 "" H 5550 5300 50  0001 C CNN
+	1    5550 5300
 	-1   0    0    1   
 $EndComp
-NoConn ~ 5900 5350
-Text GLabel 6100 5350 1    50   Input ~ 0
+NoConn ~ 5650 5300
+Text GLabel 5850 5300 1    50   Input ~ 0
 OLED_SDA
-Text GLabel 6000 5350 1    50   Input ~ 0
+Text GLabel 5750 5300 1    50   Input ~ 0
 OLED_SCL
 $Comp
 L power:+3V3 #PWR017
 U 1 1 5EC0F37C
-P 6200 5350
-F 0 "#PWR017" H 6200 5200 50  0001 C CNN
-F 1 "+3V3" H 6215 5523 50  0000 C CNN
-F 2 "" H 6200 5350 50  0001 C CNN
-F 3 "" H 6200 5350 50  0001 C CNN
-	1    6200 5350
+P 5950 5300
+F 0 "#PWR017" H 5950 5150 50  0001 C CNN
+F 1 "+3V3" H 5965 5473 50  0000 C CNN
+F 2 "" H 5950 5300 50  0001 C CNN
+F 3 "" H 5950 5300 50  0001 C CNN
+	1    5950 5300
 	1    0    0    -1  
 $EndComp
 Text GLabel 5800 3550 0    50   Input ~ 0
@@ -936,36 +923,66 @@ Wire Notes Line
 	5200 7400 650  7400
 Wire Notes Line
 	650  7400 650  2200
-Text Notes 650  2150 0    50   Italic 0
+Text Notes 650  2200 0    50   Italic 0
 Microcontroller
 Wire Notes Line
 	5400 2200 5400 3200
 Wire Notes Line
-	5400 3200 6600 3200
+	5400 3200 7200 3200
 Wire Notes Line
-	6600 3200 6600 2200
+	7200 3200 7200 2200
 Wire Notes Line
-	6600 2200 5400 2200
+	7200 2200 5400 2200
 Text Notes 5400 2200 0    50   ~ 0
 Debug
 Wire Notes Line
-	5400 3350 6600 3350
+	5400 3350 6500 3350
 Wire Notes Line
-	6600 3350 6600 4700
+	6500 3350 6500 4700
 Wire Notes Line
-	6600 4700 5400 4700
+	6500 4700 5400 4700
 Wire Notes Line
 	5400 4700 5400 3350
 Wire Notes Line
-	5400 4850 6550 4850
+	5400 4850 6250 4850
 Wire Notes Line
-	6550 4850 6550 5600
+	6250 4850 6250 5600
 Wire Notes Line
-	6550 5600 5400 5600
+	6250 5600 5400 5600
 Wire Notes Line
 	5400 5600 5400 4850
 Text Notes 5400 4850 0    50   ~ 0
 Display
 Text Notes 5400 3350 0    50   ~ 0
 Knobs
+Text GLabel 2850 4000 2    50   Input ~ 0
+USART2_TX
+Text GLabel 2850 4100 2    50   Input ~ 0
+USART2_RX
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5ED41BFE
+P 6750 2400
+F 0 "J?" V 6714 2212 50  0000 R CNN
+F 1 "USART" V 6623 2212 50  0000 R CNN
+F 2 "" H 6750 2400 50  0001 C CNN
+F 3 "~" H 6750 2400 50  0001 C CNN
+	1    6750 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J?
+U 1 1 5ED42D60
+P 5750 5500
+F 0 "J?" V 5622 5780 50  0000 L CNN
+F 1 "OLED" V 5713 5780 50  0000 L CNN
+F 2 "" H 5750 5500 50  0001 C CNN
+F 3 "~" H 5750 5500 50  0001 C CNN
+	1    5750 5500
+	0    1    1    0   
+$EndComp
+Text GLabel 6750 2600 3    50   Input ~ 0
+USART2_TX
+Text GLabel 6850 2600 3    50   Input ~ 0
+USART2_RX
 $EndSCHEMATC
