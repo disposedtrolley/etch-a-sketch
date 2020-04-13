@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 7)
+    (drawings 8)
     (tracks 0)
     (zones 0)
     (modules 37)
@@ -1697,7 +1697,7 @@
   )
 
   (module Package_QFP:LQFP-64_10x10mm_P0.5mm (layer F.Cu) (tedit 5D9F72AF) (tstamp 5E946A35)
-    (at 163.925001 29.725001)
+    (at 158 80)
     (descr "LQFP, 64 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606_7606-6_7606-4.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "LQFP QFP")
     (path /5E88491C)
@@ -1884,12 +1884,13 @@
     )
   )
 
+  (gr_arc (start 115 77) (end 115 82) (angle -90) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 115 25) (end 120 25) (angle -90) (layer Edge.Cuts) (width 0.05))
-  (gr_arc (start 25 57) (end 20 57) (angle -90) (layer Edge.Cuts) (width 0.05))
+  (gr_arc (start 25 77) (end 20 77) (angle -90) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 25 20) (end 115 20) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 25 25) (end 25 20) (angle -90) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 20 57) (end 20 25) (layer Edge.Cuts) (width 0.05) (tstamp 5E9460A7))
-  (gr_line (start 120 62) (end 25 62) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 120 25) (end 120 62) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 20 77) (end 20 25) (layer Edge.Cuts) (width 0.05) (tstamp 5E9460A7))
+  (gr_line (start 115 82) (end 25 82) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 120 25) (end 120 77) (layer Edge.Cuts) (width 0.05))
 
 )
