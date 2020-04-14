@@ -56,8 +56,6 @@ NoConn ~ 2850 4500
 NoConn ~ 2850 4400
 NoConn ~ 2850 4300
 NoConn ~ 2850 4200
-NoConn ~ 2850 3900
-NoConn ~ 2850 3800
 NoConn ~ 6400 4450
 NoConn ~ 6400 4250
 NoConn ~ 6400 3750
@@ -825,13 +823,13 @@ Text GLabel 2850 6400 2    50   Input ~ 0
 OLED_SDA
 Text GLabel 2850 6300 2    50   Input ~ 0
 OLED_SCL
-Text GLabel 2850 4600 2    50   Input ~ 0
-ENC1_A
 Text GLabel 2850 4700 2    50   Input ~ 0
+ENC1_A
+Text GLabel 2850 4600 2    50   Input ~ 0
 ENC1_B
-Text GLabel 1550 6100 0    50   Input ~ 0
+Text GLabel 2850 3900 2    50   Input ~ 0
 ENC2_A
-Text GLabel 1550 6000 0    50   Input ~ 0
+Text GLabel 2850 3800 2    50   Input ~ 0
 ENC2_B
 Text GLabel 6250 2950 2    50   Input ~ 0
 NRST
@@ -1126,4 +1124,6 @@ F 3 "" H 6300 6150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6050 6150 6300 6150
+NoConn ~ 1550 6000
+NoConn ~ 1550 6100
 $EndSCHEMATC
