@@ -2,8 +2,8 @@
 
   (general
     (thickness 1.6)
-    (drawings 9)
-    (tracks 0)
+    (drawings 8)
+    (tracks 1)
     (zones 0)
     (modules 37)
     (nets 73)
@@ -1884,9 +1884,6 @@
     )
   )
 
-  (gr_text "Baby Moose" (at 41.75 25) (layer F.SilkS)
-    (effects (font (size 2 2) (thickness 0.15)))
-  )
   (gr_arc (start 115 77) (end 115 82) (angle -90) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 115 25) (end 120 25) (angle -90) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 25 77) (end 20 77) (angle -90) (layer Edge.Cuts) (width 0.05))
@@ -1895,5 +1892,7 @@
   (gr_line (start 20 77) (end 20 25) (layer Edge.Cuts) (width 0.05) (tstamp 5E9460A7))
   (gr_line (start 115 82) (end 25 82) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 120 25) (end 120 77) (layer Edge.Cuts) (width 0.05))
+
+  (segment (start 79.25 54.75) (end 78.8125 54.75) (width 0.25) (layer F.Cu) (net 11))
 
 )
