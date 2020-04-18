@@ -823,9 +823,9 @@ Text GLabel 2850 6400 2    50   Input ~ 0
 OLED_SDA
 Text GLabel 2850 6300 2    50   Input ~ 0
 OLED_SCL
-Text GLabel 2850 4600 2    50   Input ~ 0
-ENC1_A
 Text GLabel 2850 4700 2    50   Input ~ 0
+ENC1_A
+Text GLabel 2850 4600 2    50   Input ~ 0
 ENC1_B
 Text GLabel 2850 3900 2    50   Input ~ 0
 ENC2_A

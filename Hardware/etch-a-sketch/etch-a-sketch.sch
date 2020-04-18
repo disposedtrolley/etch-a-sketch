@@ -827,9 +827,9 @@ Text GLabel 2850 4700 2    50   Input ~ 0
 ENC1_A
 Text GLabel 2850 4600 2    50   Input ~ 0
 ENC1_B
-Text GLabel 2850 3900 2    50   Input ~ 0
-ENC2_A
 Text GLabel 2850 3800 2    50   Input ~ 0
+ENC2_A
+Text GLabel 2850 3900 2    50   Input ~ 0
 ENC2_B
 Text GLabel 6250 2950 2    50   Input ~ 0
 NRST
