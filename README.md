@@ -1,3 +1,5 @@
 # etch-a-sketch
 
-STM32-based Etch-a-Sketch widget with an E-Ink display and rotary encoders.
+STM32-based Etch A Sketch widget with an OLED display and rotary encoders.
+
+![PCB](./pcb.png)
