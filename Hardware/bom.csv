@@ -11,7 +11,7 @@ Designator,Quantity,Value,Footprint,LCSC Part #
 "FB1, FB2, ",2,100 @ 100MHz,0805,C1015
 "HSE1, ",1,16MHz,SMD-3225_4P,C13738
 "J1, ",1,USART,Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical,
-"J2, ",1,Conn_02x05_Odd_Even,Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD,
+"J2, ",1,Conn_02x05_Odd_Even,Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical,
 "J3, ",1,OLED,Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical,
 "J4, ",1,Power Connector,10118194-0001LF,
 "R1, R5, ",2,2k2,0603,C4190
