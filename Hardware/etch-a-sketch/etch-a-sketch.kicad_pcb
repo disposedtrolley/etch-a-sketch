@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 22)
+    (drawings 30)
     (tracks 309)
     (zones 0)
     (modules 37)
@@ -976,7 +976,7 @@
     )
   )
 
-  (module LED_SMD:LED_0603_1608Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5E95BC97)
+  (module LED_SMD:LED_0603_1608Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5E9A737C)
     (at 82 34.5375 90)
     (descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags diode)
@@ -1887,6 +1887,18 @@
     )
   )
 
+  (gr_circle (center 46.8 53.5) (end 46.8 53.5) (layer F.SilkS) (width 0.12) (tstamp 5E9A7C5C))
+  (gr_circle (center 93.2 48.5) (end 93.2 48.5) (layer F.SilkS) (width 0.12) (tstamp 5E9A7C5A))
+  (gr_circle (center 71.4 28.1) (end 71.4 28.1) (layer F.SilkS) (width 0.12) (tstamp 5E9A7C58))
+  (gr_circle (center 104.5 28.3) (end 104.5 28.3) (layer F.SilkS) (width 0.12) (tstamp 5E9A7C56))
+  (gr_circle (center 58.5 46.4) (end 58.5 46.4) (layer F.SilkS) (width 0.12) (tstamp 5E9A77F3))
+  (gr_circle (center 63.3 47.25) (end 63.3 47.25) (layer F.SilkS) (width 0.12))
+  (gr_text + (at 82.75 33) (layer F.SilkS) (tstamp 5E9A7343)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (gr_text + (at 78.5 54) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
   (gr_text STAT (at 80 53) (layer F.SilkS) (tstamp 5E9A67FD)
     (effects (font (size 1 1) (thickness 0.15)))
   )
