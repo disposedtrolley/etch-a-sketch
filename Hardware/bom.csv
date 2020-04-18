@@ -13,7 +13,7 @@ Designator,Quantity,Value,Footprint,LCSC Part #
 "J1, ",1,USART,Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical,
 "J2, ",1,Conn_02x05_Odd_Even,Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD,
 "J3, ",1,OLED,Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical,
-"J4, ",1,Power Connector,Connector_USB:USB_Micro-B_Wuerth_629105150521,
+"J4, ",1,Power Connector,10118194-0001LF,
 "R1, R5, ",2,2k2,0603,C4190
 "R2, R3, ",2,10k,0402,C25744
 "R4, ",1,220,0402,C25091
