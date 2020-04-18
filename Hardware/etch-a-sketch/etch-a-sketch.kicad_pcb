@@ -1817,8 +1817,8 @@
     )
   )
 
-  (module digikey-footprints:USB_Micro_B_Female_10118194-0001LF (layer F.Cu) (tedit 5D28ADCC) (tstamp 5E9B1B7B)
-    (at 69.75 23.85 180)
+  (module digikey-footprints:USB_Micro_B_Female_10118194-0001LF (layer F.Cu) (tedit 5D28ADCC) (tstamp 5E9B2243)
+    (at 70 25.25 180)
     (descr http://portal.fciconnect.com/Comergent//fci/drawing/10118194.pdf)
     (path /5EACED3E)
     (attr smd)
